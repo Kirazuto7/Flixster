@@ -27,9 +27,8 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="https://github.com/Kirazuto7/Flixster/blob/master/flixster-land.gif" width=400 height=200><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
--The initial summary text for the first movie was too big so I had to adjust the size to make it more proportionate with the screen.
--Requesting api from the movie database directly resulted in continuous "Network Errors".
+1)The initial summary text for the first movie was too big so I had to adjust the size to make it more proportionate with the screen.
+2)Requesting api from the movie database directly resulted in continuous "Network Errors".
 
 ### Open-source libraries used
 
