@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterInside;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixster.DetailActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
@@ -24,10 +26,13 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
     Context context;
     List<Movie> movies;
+    int radius = 24;
 
     public MovieAdapter(Context context, List<Movie> movies){
         this.context = context;
@@ -89,7 +94,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             }
 
             //Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            Glide.with(context).load(imageUrl).transform(new CenterInside(), new RoundedCorners(radius)).into(ivPoster);
 
             //1. Register click listener on the whole row
             //2. Navigate to a new activity on tap
